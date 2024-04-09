@@ -1,5 +1,7 @@
 ### Song created with AI, Suno is amazing！震惊了我！！
 
+https://app.suno.ai/
+
 不同风格尝试了一下，感受是歌曲风格欧美风比较重，应该和训练数据集很相关。另外还不能很好理解歌词的段落，曲风还有点单调。
 
 看好suno未来的迭代！
