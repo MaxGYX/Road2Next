@@ -7,8 +7,9 @@ https://usaco.org/index.php?page=viewproblem2&cpid=1395
 * d. If S=20, Bessie cannot take 10/20, no matter K Bessie takes, Elsie will face a/c, then Elsie win
 * e. If S in [21-29], Bessie take K=S%10, and Elsie will face 20 stones, then Bessie win.
 * f. If S=30, Bessie cannot take 10/20/30, no matter K Bessie takes, Elsie will face a/c/e, then Elsie win.
+* … 
 
-… so solution is quite easy, if ((S%10) != 0) Bessie win, else Elsie win.
+so solution is quite easy, if ((S%10) != 0) Bessie win, else Elsie win.
 
 One line code, I cannot believe that :_)
 
