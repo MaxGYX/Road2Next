@@ -1,4 +1,4 @@
-# How to use ChatGPT as my TOEFL writing coach.
+# How to use ChatGPT as my writing coach.
 
 I learned that current AI tools need to be guided by prompts, which means I need to tell it step by step how to complete the task.
 
