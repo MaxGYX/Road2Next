@@ -5,3 +5,6 @@
    好的解释总是直接击中痛点。
    
    <img width="413" alt="image" src="https://github.com/MaxGYX/Road2Next/assets/158791943/fb4bb75a-6be0-47a2-9081-9f3a6132725d">
+
+
+A lot of new knowledge to learn, a little busy.
