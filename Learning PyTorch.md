@@ -1,4 +1,7 @@
 选择用**PyTorch**来实现后面的项目，开一篇来记录学习中遇到的问题
+
+主要参考 https://pytorch.zhangxiann.com/ 的内容来学习，是我找到的比较适合自己的文章，有些看不懂的先跳过了，捡着对自己理解有帮助的内容来学习并做一些笔记便于回看加深理解。
+
 ## Why PyTorch
 -  PyTorch是FAIR（Facebook AI Research）发布的深度学习框架。
 -  PyTorch是在Torch基础上使用Python语言重新打造的（所以叫PyTorch），而Torch是使用Lua语言的机器学习框架，使用成本高。
