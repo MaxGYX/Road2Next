@@ -39,3 +39,5 @@ test_set = torchvision.datasets.MNIST(root='./data', train=False, download=True,
 train_loader = torch.utils.data.DataLoader(train_set, batch_size=64, shuffle=True)
 test_loader = torch.utils.data.DataLoader(test_set, batch_size=64, shuffle=False)
 ```
+
+### 建立网络模型
