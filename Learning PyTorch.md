@@ -15,7 +15,7 @@
    <img width="346" alt="image" src="https://github.com/MaxGYX/Road2Next/assets/158791943/77a7ce6c-b2f3-4164-bd13-b6b33b01e40b">
 
 ### 理解Tensor
-Tensor张量，可以理解成一个多维数组，PyTorch中大多数操作都围绕着Tensor进行
+Tensor张量，可以理解成一个**多维数组**，PyTorch中大多数操作都围绕着Tensor进行
 <img width="764" alt="image" src="https://github.com/MaxGYX/Road2Next/assets/158791943/dfc3dbb3-15da-40a8-b34f-1071bed09661">
 
 ### 从数据集导入数据
@@ -41,3 +41,65 @@ test_loader = torch.utils.data.DataLoader(test_set, batch_size=64, shuffle=False
 ```
 
 ### 建立网络模型
+建立一个包括2个卷积层和3个全连接层的网络。
+
+```python
+# 定义一个CNN网络（从nn.Module继承），需要自己实现两个方法
+#   __init__：定义网络模型的层次结构
+#   forward：定义前向计算的过程，在Module的训练过程中自动被调用
+class SimpleCNN(nn.Module):
+    def __init__(self):
+        super(SimpleCNN, self).__init__()
+        #网络中包括2个卷积层
+        #   conv1： in_channels,输入维度1，灰度图只有一个channel，即输入就是1个28x28的tensor结构
+        #           out_channels,输出维度32，即采用32个卷积核对输入进行卷积计算，输出会产生32个卷积的结果。
+        #           kernel_size=3, 卷积核Filter尺寸3x3
+        #           padding=1，对卷积后的结果外围补1圈数据
+        #           卷积后的数据尺寸：
+        #               h = (H-F+2*P)/S + 1 = (28-3+2*1)/1  + 1 = 28
+        #               w = (W-F+2*P)/S + 1 = (28-3+2*1)/1  + 1 = 28
+        #               即通过设置padding=1将卷积后的数据尺寸保持在28*28
+        self.conv1 = nn.Conv2d(1, 32, kernel_size=3, padding=1)
+        #   conv2： in_channels,输入维度32，即第一层卷积后的32个结果
+        #           out_channels,输出维度64，即采用2个卷积核对输入进行卷积计算，输出会产生64个卷积的结果。
+        #           kernel_size=3, 卷积核Filter尺寸3x3
+        #           padding=1，对卷积后的结果外围补1圈数据
+        #           卷积后的数据尺寸：
+        #               h = (H-F+2*P)/S + 1 = (28-3+2*1)/1  + 1 = 28
+        #               w = (W-F+2*P)/S + 1 = (28-3+2*1)/1  + 1 = 28
+        #               即通过设置padding=1将第二层卷积后的数据尺寸继续保持在28*28
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1)
+        #网络中包含1个池化层
+        #   pool：采用最大池化策略 nn.MaxPool2d (2维数据的最大池化）
+        #           kernel_size=2, 对2x2的区域进行池化
+        #           stride=2，每次步长=2
+        #           padding=0，结果不进行padding
+        #           pooling前每个数据尺寸28x28，经过1次pooling后，尺寸变为14x14（kernel2x2，所以H/W都缩小一半）
+        self.pool = nn.MaxPool2d(kernel_size=2, stride=2, padding=0)
+        #网络中包含3个线性层（全连接层）
+        #   fc1: in_features：64x7x7，每个28x28数据经过2次pooling, 变成7x7, 第二层卷积输出维度64.
+        #        out_features: 128, 将输入归类到128个输出结果上（即这个线性层有 128个节点）
+        #   fc2: 将上一层128个结果作为输入，归类到64个输出结果上。
+        #   fc3: 将上一层64个结果作为输入，归类到10个输出结果上。（我们最终需要的识别0～9手写字体共10类结果）
+        self.fc1 = nn.Linear(64 * 7 * 7, 128)
+        self.fc2 = nn.Linear(128, 64)
+        self.fc3 = nn.Linear(64, 10)
+
+    def forward(self, x):
+        # 先进行第1层卷积，结果经过relu非线性激活函数后，进行一次最大池化
+        x = self.pool(torch.relu(self.conv1(x)))
+        # 再进行第2层卷积，结果经过relu非线性激活函数后，进行一次最大池化
+        x = self.pool(torch.relu(self.conv2(x)))
+        # x.view()是将tensor结构数据进行reshape(改变尺寸)
+        #   -1,表示不确认有多少行,由函数自己来计算
+        #   64x7x7, 表示reshape后每一行数据有64x7x7列
+        #   实际上经过这个函数后，每个输入(28x28)多次卷积后的数据会排列成一个64x7x7=3136的列，相当于把tensor展平
+        x = x.view(-1, 64 * 7 * 7)
+        # 进行第1次全连接，结果经过relu非线性激活函数
+        x = torch.relu(self.fc1(x))
+        # 进行第2次全连接，结果经过relu非线性激活函数
+        x = torch.relu(self.fc2(x))
+        # 进行第3次全连接
+        x = self.fc3(x)
+        return x
+```
