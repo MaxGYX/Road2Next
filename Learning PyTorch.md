@@ -103,3 +103,6 @@ class SimpleCNN(nn.Module):
         x = self.fc3(x)
         return x
 ```
+
+### 训练Training
+
