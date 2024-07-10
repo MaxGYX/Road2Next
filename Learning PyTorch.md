@@ -106,3 +106,39 @@ class SimpleCNN(nn.Module):
 
 ### 训练Training
 
+```python
+def train(model, train_loader, criterion, optimizer, epochs=5, save_interval=1):
+    losses = []  # 记录每个epoch的损失值
+    for epoch in range(epochs):
+        # 迭代epochs轮数据
+        running_loss = 0.0
+        for inputs, labels in train_loader:
+            # 迭代batch数据，每次循环处理一个batch的数据集
+            inputs, labels = inputs.to(device), labels.to(device)
+            # 重置optimizer里的梯度变量
+            optimizer.zero_grad()
+            # 执行forward计算，即根据当前模型参数计算输入对应的输出，其中会调用model.forward()
+            outputs = model(inputs)
+            # 计算loss
+            loss = criterion(outputs, labels)
+            # 计算loss的各参数对应的梯度；
+            loss.backward()
+            # 更新模型参数，用于下一次前向计算
+            optimizer.step()
+            # 累计loss
+            running_loss += loss.item()
+
+        # 计算并记录每个epoch的平均损失
+        epoch_loss = running_loss / len(train_loader)
+        losses.append(epoch_loss)
+
+        # 打印每个epoch的平均损失
+        print(f"Epoch {epoch + 1}, Loss: {epoch_loss}")
+
+        # 每隔一定的epoch保存模型
+        if ((epoch + 1) % save_interval == 0):
+            save_model(model, epoch + 1)
+
+    # 保存损失数据
+    np.savetxt(os.path.join(save_dir, 'losses.txt'), np.array(losses))
+```
