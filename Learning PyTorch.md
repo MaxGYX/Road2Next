@@ -142,3 +142,5 @@ def train(model, train_loader, criterion, optimizer, epochs=5, save_interval=1):
     # 保存损失数据
     np.savetxt(os.path.join(save_dir, 'losses.txt'), np.array(losses))
 ```
+
+### 推理
