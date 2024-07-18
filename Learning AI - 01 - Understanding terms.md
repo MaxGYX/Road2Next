@@ -1,5 +1,6 @@
 
 AI中很多术语，先慢慢理解具体的含义和关联。
+<img width="838" alt="image" src="https://github.com/user-attachments/assets/b3735251-814c-42ff-91b4-2c70238bc346">
 
 * **AI（Artificial Intelligence）人工智能**：通过计算机实现人类的智能。
 * **Machine Learning 机器学习**: 计算机通过大量数据进行学习以获得解决问题的能力（而不是使用逻辑规则编码去解决问题），是实现人工智能的一种方式。
