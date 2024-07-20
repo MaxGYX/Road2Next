@@ -144,3 +144,29 @@ def train(model, train_loader, criterion, optimizer, epochs=5, save_interval=1):
 ```
 
 ### 推理
+```python
+def test(model, test_loader, classes):
+    # 将模型设置为评估模式
+    model.eval()
+    correct = 0
+    total = 0
+    torch.no_grad()
+    # torch.no_grad()的作用是在模型的推理阶段禁用梯度计算。可以显著减少内存消耗并增加运行速度
+    # touch.no_grad()相当于一个上下文管理器,被该语句 wrap 起来的部分将不会track梯度
+    with torch.no_grad():
+        for inputs, labels in test_loader:
+            # 每次循环处理一个batch的test数据集
+            inputs, labels = inputs.to(device), labels.to(device)
+            # 使用模型预测结果
+            outputs = model(inputs)
+            _, predicted = torch.max(outputs.data, 1)
+            #print(f"predicted: {predicted}")
+            #predicted格式：tensor of 64个（batch_size）推理出的所属分类
+            #   tensor([8, 6, 4, 1, 9, 3, 8, 4, 4, 7, 0, 1, 9, 2, 8, 7, 8, 2, 6, 0, 6, 5, 3, 3,
+            #           3, 9, 1, 4, 0, 6, 1, 0, 0, 6, 2, 1, 1, 7, 7, 8, 4, 6, 0, 7, 0, 3, 6, 8,
+            #           7, 1, 5, 2, 4, 9, 4, 3, 6, 4, 1, 7, 2, 6, 6, 0]
+            total += labels.size(0)
+            #累计predicted和labels一致的数量
+            correct += (predicted == labels).sum().item()
+    print(f"Accuracy: {100 * correct / total}%")
+```
