@@ -14,3 +14,8 @@ A lot of new knowledge to learn, a little busy.
 
 今天老师说到对AI项目来说，数据集至关重要，才意识到这部分的工作量是很大的，且很多需要人工完成。
 一个看起来很酷炫的项目背后，首先是很苦逼的数据收集和处理。。。
+
+
+**sonoteller**，一个分析歌曲流派，风格特征的网站
+
+https://sonoteller.ai/
