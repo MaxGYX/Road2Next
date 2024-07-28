@@ -19,3 +19,7 @@ A lot of new knowledge to learn, a little busy.
 **sonoteller**，一个分析歌曲流派，风格特征的网站
 
 https://sonoteller.ai/
+
+**Suno Chirp V1关键词**
+
+https://mrkwtkr.notion.site/d6ed0dc92153450c8e7c8c15639eb6ef?v=23aff0603ebf4477bde2b598c8c32974
