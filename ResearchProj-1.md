@@ -43,3 +43,6 @@ https://mrkwtkr.notion.site/d6ed0dc92153450c8e7c8c15639eb6ef?v=23aff0603ebf4477b
      -   下图是两个不同乐器演奏的同一个音高产生的频谱图。可以看出不同琴的音色直观的由不同倍频所决定。
           <img width="563" alt="image" src="https://github.com/user-attachments/assets/be11c833-6b82-4624-b2ce-38c7e42ebde5">
 
+### MIDI （Musical Instrument Digital Interface，音乐设备数字接口）
+
+
