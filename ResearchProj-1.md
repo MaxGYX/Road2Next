@@ -44,5 +44,10 @@ https://mrkwtkr.notion.site/d6ed0dc92153450c8e7c8c15639eb6ef?v=23aff0603ebf4477b
           <img width="563" alt="image" src="https://github.com/user-attachments/assets/be11c833-6b82-4624-b2ce-38c7e42ebde5">
 
 ### MIDI （Musical Instrument Digital Interface，音乐设备数字接口）
+-   MIDI文件中存储的不是音频数据，而是乐器的演奏指令（wav/mp3这些存储的都是音频数据，而MIDI类似乐谱）。
+-   MIDI文件格式
+     https://majicdesigns.github.io/MD_MIDIFile/page_smf_definition.html
 
+    
+   
 
