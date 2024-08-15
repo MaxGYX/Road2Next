@@ -48,8 +48,8 @@ https://mrkwtkr.notion.site/d6ed0dc92153450c8e7c8c15639eb6ef?v=23aff0603ebf4477b
 -   MIDI文件格式
      https://majicdesigns.github.io/MD_MIDIFile/page_smf_definition.html
 -   python第三方库解析&生成MIDI文件
-   -   pretty_midi (https://craffel.github.io/pretty-midi/)
-   -   mido（https://mido.readthedocs.io/en/stable/index.html）来解析&生成MIDI文件
+      -   pretty_midi https://craffel.github.io/pretty-midi/
+      -   mido https://mido.readthedocs.io/en/stable/index.html
    ```python
          import pretty_midi
 
