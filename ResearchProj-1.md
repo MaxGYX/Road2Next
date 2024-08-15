@@ -47,7 +47,18 @@ https://mrkwtkr.notion.site/d6ed0dc92153450c8e7c8c15639eb6ef?v=23aff0603ebf4477b
 -   MIDI文件中存储的不是音频数据，而是乐器的演奏指令（wav/mp3这些存储的都是音频数据，而MIDI类似乐谱）。
 -   MIDI文件格式
      https://majicdesigns.github.io/MD_MIDIFile/page_smf_definition.html
+-   python第三方库解析&生成MIDI文件
+   -   pretty_midi (https://craffel.github.io/pretty-midi/)
+   -   mido（https://mido.readthedocs.io/en/stable/index.html）来解析&生成MIDI文件
+   ```python
+         import pretty_midi
 
+         midi_data = pretty_midi.PrettyMIDI('hktk.mid')
+         for instrument in midi_data.instruments:
+             print(instrument.program, instrument.name)
+             for note in instrument.notes:
+                 print(note)
+   ```
     
    
 
