@@ -1,5 +1,5 @@
 
-**LSTM**（Long Short Term Memory）是RNN的一种变体，解决传统RNN中的梯度爆炸和梯度消失问题。
+**LSTM**（Long Short Term Memory长短期记忆网络）是RNN的一种变体，解决传统RNN中的梯度爆炸和梯度消失问题。
 
 所有RNN都具有重复模块的链式结构，对比传统RNN和LSTM的模块
 
