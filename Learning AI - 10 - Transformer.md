@@ -7,3 +7,18 @@ RNN/LSTM虽然也是用于处理长序列数据，但是有两个弱点：
 - 处理当前token的时候，依赖之前的token处理结果（意味着在计算时间t的计算之前，它必须完成时间t-1的计算），必须串行处理数据，所以训练和推理速度会比较慢。
   
 Transformer架构使用一种叫做Attention的机制（注意力机制）解决了这两个问题。
+
+### Self-Attention自注意力模型
+Self-Attention是Transformer的核心，本质是**描述输入的数据各元素（Token）之间的相关性，也就是输入数据本身的内在关联**。
+
+下图左半部分，Scaled Dot-Product Attention描述了自注意力的实现过程，也就是使用矩阵的点积（Dot-Product）运算来实现token之间的相关性计算。
+
+<img width="706" alt="image" src="https://github.com/user-attachments/assets/b14da76c-9f22-4a46-8a13-0ffaeff7af8c">
+
+公式描述就是：
+
+<img width="347" alt="image" src="https://github.com/user-attachments/assets/0921ab11-7167-4f5c-8a66-8b5bd34dc472">
+
+**详细理解这个过程**
+
+
