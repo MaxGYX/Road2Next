@@ -24,7 +24,7 @@ Self-Attention是Transformer的核心，本质是**描述输入的数据各元�
     <img width="776" alt="image" src="https://github.com/user-attachments/assets/0a0db67b-b7df-4094-aaff-5f2281c408ab">
 
      对这个输入矩阵做3个线性变换，和Wq矩阵做点积操作得到Q（Query），和Wk矩阵做点积操作得到K（Key），和Wv矩阵做点积操作得到V（Value）。
-     -  Wq/Wk/Wv 三个矩阵都是通过训练得到的，这3个矩阵的维度相同。
+     -  Wq/Wk/Wv 三个矩阵都是通过训练得到的，这3个矩阵的维度相同 (维度都是Emb*Emb）。
      -  Q/K/V 都是原始输入数据通过线性变换得到的，因此可以理解都是原始数据的某种表示。
 -  2， Q矩阵和K的转置矩阵做点积运算，Query矩阵每一行表示一个token，Key矩阵转置后每一列代表一个token，因此点积运算后实际上是得到的是每一个token和其他token（包括自己）之间的相似性。
 
