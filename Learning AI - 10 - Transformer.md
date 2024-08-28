@@ -20,5 +20,11 @@ Self-Attention是Transformer的核心，本质是**描述输入的数据各元�
 <img width="347" alt="image" src="https://github.com/user-attachments/assets/0921ab11-7167-4f5c-8a66-8b5bd34dc472">
 
 **详细理解这个过程**
+-  1，首先是对输入的数据进行数字化的表示，比如输入是一句话“you are welcome PAD”，对每一个token都表示成一个数值向量（一句话就表示成了一个矩阵， Embedding+Positional Encoding）
+    <img width="776" alt="image" src="https://github.com/user-attachments/assets/0a0db67b-b7df-4094-aaff-5f2281c408ab">
+
+     对这个输入矩阵做3个线性变换，和Wq矩阵做点积操作得到Q，和Wk矩阵做点积操作得到K，和Wv矩阵做点积操作得到V。
+     -  Wq/Wk/Wv 三个矩阵都是通过训练得到的，这3个矩阵的维度相同。
+     -  Q/K/V 都是原始输入数据的某种表示。
 
 
