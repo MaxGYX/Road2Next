@@ -21,10 +21,29 @@ Self-Attention是Transformer的核心，本质是**描述输入的数据各元�
 
 **详细理解这个过程**
 -  1，首先是对输入的数据进行数字化的表示，比如输入是一句话“you are welcome PAD”，对每一个token都表示成一个数值向量（一句话就表示成了一个矩阵， Embedding+Positional Encoding）
-    <img width="776" alt="image" src="https://github.com/user-attachments/assets/0a0db67b-b7df-4094-aaff-5f2281c408ab">
+      <img width="776" alt="image" src="https://github.com/user-attachments/assets/0a0db67b-b7df-4094-aaff-5f2281c408ab">
 
      对这个输入矩阵做3个线性变换，和Wq矩阵做点积操作得到Q（Query），和Wk矩阵做点积操作得到K（Key），和Wv矩阵做点积操作得到V（Value）。
      -  Wq/Wk/Wv 三个矩阵都是通过训练得到的，这3个矩阵的维度相同 (维度都是Emb*Emb）。
      -  Q/K/V 都是原始输入数据通过线性变换得到的，因此可以理解都是原始数据的某种表示。
 -  2， Q矩阵和K的转置矩阵做点积运算，Query矩阵每一行表示一个token，Key矩阵转置后每一列代表一个token，因此点积运算后实际上是得到的是每一个token和其他token（包括自己）之间的相似性。
+
+      <img width="461" alt="image" src="https://github.com/user-attachments/assets/fb1e3c85-42df-4ce7-8b37-4762dc726097">
+        
+-  3， 通过K矩阵的维度 𝑑𝑘 进行scaling，进行缩放的原因是当 𝑑𝑘 比较大时，Q/K运算后会得到很大的值，而这将导致在经过sofrmax操作后产生非常小的梯度，不利于网络的训练。
+
+       ❝ We suspect that for large values of dk, the dot products grow large in magnitude, pushing the softmax function into regions where it has extremely small gradients.❞
+-  4， softmax操作将一个token所对应的其他token的相似度进行归一，即每一行的和为1。
+-  5， 用得到的token相似度矩阵作为权重对V值进行加权平均，得到最终的编码输出。
+  
+      <img width="476" alt="image" src="https://github.com/user-attachments/assets/795e02e9-a69c-4257-987b-efd44e6939aa">
+      
+      换一个角度看这个过程，对于某一个token，
+
+      <img width="472" alt="image" src="https://github.com/user-attachments/assets/941810a8-a338-41b7-af0b-447900c31995">
+
+      对于最终输出“是”的编码向量来说，它其实就是原始“我/是/谁”3个向量的相关度的加权和，即最终得到的“是”这个token其实是包含了与这句话里全部token的相关性信息。
+
+以上就是Self-Attention（自注意力模型）的实现过程，这也是**对输入数据进行编码并提取特征**的过程。
+由于每个token的特征提取都用到了输入数据中所有的token，所以这是一种**全局**的特征提取，采用加权求和的方式，权重是tokne之间的相关性。
 
