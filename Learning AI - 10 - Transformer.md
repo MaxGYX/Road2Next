@@ -55,9 +55,24 @@ Multi-head实际上就是把Wq/Wk/Wv矩阵拆成h个（head数）小矩阵，并
 上图表示的是2个head的计算过程。在《Attention is all you need》论文中，使用了h=8并行的自注意力模块（8个头）来构建一个注意力层，Wq/Wk/Wv矩阵列数dq=dk=dv=dmodel/h。
 
 **实际上，多头注意力机制其实就是将一个大的高维单头拆分成了h个多头**。
-<img width="596" alt="image" src="https://github.com/user-attachments/assets/a61248db-2c0e-4ba3-9d28-6067becabdd5">
+<img width="581" alt="image" src="https://github.com/user-attachments/assets/19edecc0-7db6-4eff-842f-7d8009a32d96">
 
 得到多个输出矩阵之后，Multi-Head Attention 将它们拼接在一起 (Concat)，然后传入一个Linear层【和一个Wo矩阵（列数dm）进行点积运算】，得到 Multi-Head Attention 最终的输出Z
 <img width="713" alt="image" src="https://github.com/user-attachments/assets/aa6b4758-17d3-4c4e-ac72-7fce7827832c">
+
+#### 为什么要用Multi-head
+自注意力机制的缺陷就是：模型在对当前位置的信息进行编码时，会过度的将注意力集中于自身的位置，因此作者提出了通过多头注意力机制来解决这一问题。
+
+同时，使用多头注意力机制还能够给予**注意力层的输出包含有不同子空间中的编码表示信息，从而增强模型的表达能力**。（不太懂，先放在这里）
+
+❝ Multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions. ❞
+
+
+
+很多内容是从找到的比较适合自己理解的文章中摘取，**对初学者很友好的文章：**
+-  https://www.zhihu.com/question/341222779/answer/2466825259
+-  https://zhuanlan.zhihu.com/p/338817680
+-  强烈推荐TransformerNeuralNetworks@**StatQuest** https://www.youtube.com/watch?v=zxQyTK8quyY
+
 
 
