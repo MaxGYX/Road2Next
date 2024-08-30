@@ -47,3 +47,5 @@ Self-Attention是Transformer的核心，本质是**描述输入的数据各元�
 以上就是Self-Attention（自注意力模型）的实现过程，这也是**对输入数据进行编码并提取特征**的过程。
 由于每个token的特征提取都用到了输入数据中所有的token，所以这是一种**全局**的特征提取，采用加权求和的方式，权重是tokne之间的相关性。
 
+### Multi-Head Attention 多头注意力
+
