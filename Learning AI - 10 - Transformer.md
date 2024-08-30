@@ -48,4 +48,16 @@ Self-Attention是Transformer的核心，本质是**描述输入的数据各元�
 由于每个token的特征提取都用到了输入数据中所有的token，所以这是一种**全局**的特征提取，采用加权求和的方式，权重是tokne之间的相关性。
 
 ### Multi-Head Attention 多头注意力
+Multi-head实际上就是把Wq/Wk/Wv矩阵拆成h个（head数）小矩阵，并行进行h个Self-Attention运算，然后把结果再拼接起来。
+
+<img width="665" alt="image" src="https://github.com/user-attachments/assets/f2298589-6dba-4fe1-89c7-03fdaf407ea5">
+
+上图表示的是2个head的计算过程。在《Attention is all you need》论文中，使用了h=8并行的自注意力模块（8个头）来构建一个注意力层，Wq/Wk/Wv矩阵列数dq=dk=dv=dmodel/h。
+
+**实际上，多头注意力机制其实就是将一个大的高维单头拆分成了h个多头**。
+<img width="596" alt="image" src="https://github.com/user-attachments/assets/a61248db-2c0e-4ba3-9d28-6067becabdd5">
+
+得到多个输出矩阵之后，Multi-Head Attention 将它们拼接在一起 (Concat)，然后传入一个Linear层【和一个Wo矩阵（列数dm）进行点积运算】，得到 Multi-Head Attention 最终的输出Z
+<img width="713" alt="image" src="https://github.com/user-attachments/assets/aa6b4758-17d3-4c4e-ac72-7fce7827832c">
+
 
