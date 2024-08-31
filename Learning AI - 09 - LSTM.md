@@ -7,3 +7,6 @@
 <img width="599" alt="image" src="https://github.com/user-attachments/assets/79434b60-0fee-4a95-af99-e05569ff72fe">
 
 LSTM中重复模块的结构更复杂（具有4个神经网络层）
+
+**LSTM生成Midi音乐**
+https://github.com/MaxGYX/Road2Next/tree/main/testcode/MidiRNN
