@@ -30,7 +30,7 @@ Self-Attention是Transformer的核心，本质是**描述输入的数据各元�
 
       <img width="461" alt="image" src="https://github.com/user-attachments/assets/fb1e3c85-42df-4ce7-8b37-4762dc726097">
         
--  3， 通过K矩阵的维度 𝑑𝑘 进行scaling，进行缩放的原因是当 𝑑𝑘 比较大时，Q/K运算后会得到很大的值，而这将导致在经过sofrmax操作后产生非常小的梯度，不利于网络的训练。
+-  3， 通过K矩阵的维度 𝑑𝑘 进行scaling，进行缩放的原因是当 𝑑𝑘 比较大时，Q/K运算后会得到很大的值，而这将导致在经过sofrmax操作后产生非常小的梯度（输入softmax的值过大，会导致偏导数趋近于0，从而导致梯度消失），不利于网络的训练。
 
        ❝ We suspect that for large values of dk, the dot products grow large in magnitude, pushing the softmax function into regions where it has extremely small gradients.❞
 -  4， softmax操作将一个token所对应的其他token的相似度进行归一，即每一行的和为1。
