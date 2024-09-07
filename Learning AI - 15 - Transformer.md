@@ -12,4 +12,4 @@
 #### 参考
 https://zhuanlan.zhihu.com/p/718356727
 
-https://link.zhihu.com/?target=https%3A//towardsdatascience.com/drawing-the-transformer-network-from-scratch-part-1-9269ed9a2c5e
+https://towardsdatascience.com/drawing-the-transformer-network-from-scratch-part-1-9269ed9a2c5e
