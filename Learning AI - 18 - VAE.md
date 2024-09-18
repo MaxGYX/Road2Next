@@ -11,3 +11,8 @@ VAE和AutoEncoder有类似的结构，即encoder和decoder这样的架构设计�
 encoder网络不直接得到隐含特征z，而是得到z的概率分布𝑝𝜃(𝑧)，所以VAE的encoder叫做Probabilistic encoder。
 
 训练完成后，我们就得到生成模型𝑝𝜃(𝑥|𝑧)𝑝𝜃(𝑧)，其中𝑝𝜃(𝑥|𝑧)就是decoder网络，而先验𝑝𝜃(𝑧)为标准正态分布，我们从𝑝𝜃(𝑧)随机采样一个𝑧，送入decoder网络，就能生成与训练数据𝑋类似的样本。
+
+VAE的细节，之前看了几遍**苏剑林**老师的文章，现在想起来还是有点似懂非懂，继续多看几遍
+
+https://kexue.fm/archives/5253
+
