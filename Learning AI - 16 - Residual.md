@@ -7,3 +7,9 @@
 而对于数据集来说，误差通常使用平均误差。比如回归分析中，通常使用均方误差（MSE）或均方根误差（RMSE）。
 
 ### 残差网络 ResNet
+ResNet论文网址：https://arxiv.org/abs/1512.03385
+
+残差神经网络的主要贡献是发现了“**退化现象（Degradation）**”，并针对退化现象发明了 “**快捷连接（Shortcut connection）**”，极大的消除了深度过大的神经网络训练困难问题。
+-  Degradation
+-  Shortcut connection
+  
