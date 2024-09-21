@@ -11,5 +11,7 @@ ResNet论文网址：https://arxiv.org/abs/1512.03385
 
 残差神经网络的主要贡献是发现了“**退化现象（Degradation）**”，并针对退化现象发明了 “**快捷连接（Shortcut connection）**”，极大的消除了深度过大的神经网络训练困难问题。
 -  Degradation
+
+   ResNet团队发现随着网络层不断的加深，模型的准确率先是不断的提高，达到最大值后，随着网络深度的继续增加，模型准确率毫无征兆的出现大幅度的降低。这个现象与“越深的网络准确率越高”的信念显然是冲突的。ResNet团队把这一现象称为“退化（Degradation）”。
 -  Shortcut connection
   
