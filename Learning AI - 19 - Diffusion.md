@@ -7,7 +7,10 @@ Diffusion模型中，首先是定义一个从数据变成噪声的正向过程�
 <img width="427" alt="image" src="https://github.com/user-attachments/assets/087909ae-cc08-49d5-b9cd-d26920fd4004">
 
 
+#### 去噪过程
 
+
+Diffusion Model也是一个U型网络。
 
 B站李宏毅老师的讲解
 
