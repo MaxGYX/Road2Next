@@ -70,9 +70,11 @@ Multi-head实际上就是把Wq/Wk/Wv矩阵拆成h个（head数）小矩阵，并
 
 ### 参考
 很多内容是从找到的比较适合自己理解的文章中摘取，**对初学者很友好的文章：**
+-  这篇很详细讲解了Attention和Transformer的网络结构：https://zhuanlan.zhihu.com/p/720320507
 -  https://www.zhihu.com/question/341222779/answer/2466825259
 -  https://zhuanlan.zhihu.com/p/338817680
 -  强烈推荐TransformerNeuralNetworks@**StatQuest** https://www.youtube.com/watch?v=zxQyTK8quyY
+
 
 
 
