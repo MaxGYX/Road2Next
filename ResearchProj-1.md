@@ -67,6 +67,11 @@ https://mrkwtkr.notion.site/d6ed0dc92153450c8e7c8c15639eb6ef?v=23aff0603ebf4477b
 -   根据MIDI文件对乐器演奏指令的学习，来生成新的音乐是可行的
 -   把一首音乐提取频谱图，当成是一副图片。学习图片生成的模型就很多了，但是对于音乐频谱图可能需要一些特别的小手段。
 
+### VAE
+https://github.com/MaxGYX/Road2Next/blob/main/Learning%20AI%20-%2018%20-%20VAE.md
+
+### Latent Diffusion Model（LDM）
+https://github.com/MaxGYX/Road2Next/blob/main/Learning%20AI%20-%2019%20-%20Diffusion.md
     
    
 
