@@ -72,6 +72,9 @@ https://github.com/MaxGYX/Road2Next/blob/main/Learning%20AI%20-%2018%20-%20VAE.m
 
 ### Latent Diffusion Model（LDM）
 https://github.com/MaxGYX/Road2Next/blob/main/Learning%20AI%20-%2019%20-%20Diffusion.md
+
+### AudioLDM，一个同样vae+ldm，支持condition的音频生成模型，太赞了！
+https://huggingface.co/docs/diffusers/main/en/api/pipelines/audioldm2
     
    
 
