@@ -81,6 +81,11 @@ https://mrkwtkr.notion.site/d6ed0dc92153450c8e7c8c15639eb6ef?v=23aff0603ebf4477b
 
 <img width="963" alt="image" src="https://github.com/user-attachments/assets/60a67191-f514-4efd-a200-c4a207dd8891">
 
+-   计算梅尔频谱图时，n_fft、hop_length 和 n_mels 是三个重要的参数。
+   -   n_fft：短时傅里叶变换（STFT）的窗口大小，表示每个时间帧内的数据点数量。例如，n_fft=1024 表示每个帧使用 1024 个样本点进行傅里叶变换。
+   -   hop_length：表示每次窗口移动的样本数。它决定了帧之间的重叠程度。例如，hop_length=256 表示每次移动 256 个样本，进行下一次计算。
+   -   n_mels：梅尔频率带的数量。这是梅尔频谱图中频率维度的大小。例如，n_mels=80 表示将频谱一共分成 80 个梅尔频率带。
+
 
 ### VAE
 https://github.com/MaxGYX/Road2Next/blob/main/Learning%20AI%20-%2018%20-%20VAE.md
