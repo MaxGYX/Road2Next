@@ -14,6 +14,8 @@ Diffusion模型中，首先是定义一个从数据变成噪声的正向过程�
 
 
 #### 结构
+<img width="783" alt="image" src="https://github.com/user-attachments/assets/70c6d013-643f-40dc-961d-7eba2e5e5081">
+    
 Diffusion Model结构中包含一个Scheduler模块和一个U-Net模块，其中：
 -  Scheduler负责加噪过程输出噪声每个step的噪声系数，噪声 = 随机生成噪声 * scheduler输出的系数。
 -  U-Net负责在去噪过程中预测噪声。结构特点是U型设计和跳层残差连接。
