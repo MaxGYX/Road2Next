@@ -30,3 +30,19 @@ ResNet论文网址：https://arxiv.org/abs/1512.03385
 **这篇文章说的真清楚：**
 
 https://zhuanlan.zhihu.com/p/101332297
+
+一个例子
+```python
+class ResidualBlock(nn.Module):
+    def __init__(self, num_hiddens):
+        super(ResidualBlock, self).__init__()
+        self.conv1 = nn.Conv2d(num_hiddens, num_hiddens, kernel_size=3, stride=1, padding=1)
+        self.conv2 = nn.Conv2d(num_hiddens, num_hiddens, kernel_size=3, stride=1, padding=1)
+
+    def forward(self, x):
+        # 将输入数据x与经过2层卷积之后的数据进行连接，再经过relu激活函数后做为输出数据
+        residual = x
+        x = F.relu(self.conv1(x))
+        x = self.conv2(x)
+        return F.relu(x + residual)
+```
