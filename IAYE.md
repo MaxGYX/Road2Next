@@ -35,3 +35,20 @@ QWen vision model还挺好用的～
     description = response.choices[0].message.content
     print(f"Description: {description}")
 ```
+
+QWen的sambert语音模型目前免费额度还不少
+
+```python
+        audio = SpeechSynthesizer.call(model='sambert-zhiting-v1',
+                                        text=description,
+                                        sample_rate=48000,
+                                        format='wav')
+
+        if audio.get_audio_data() is not None:
+            with open('response.wav', 'wb') as f:
+                f.write(audio.get_audio_data())
+            print('SUCCESS: get audio data: %dbytes in response.wav' %
+                  (sys.getsizeof(audio.get_audio_data())))
+        else:
+            print('ERROR: response is %s' % (audio.get_response()))
+```
