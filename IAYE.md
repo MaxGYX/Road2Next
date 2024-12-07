@@ -38,6 +38,13 @@ QWen vision model还挺好用的～
     print(f"Description: {description}")
 ```
 
+QWen的service和api说明
+
+https://help.aliyun.com/zh/model-studio/user-guide/vision
+
+https://help.aliyun.com/zh/model-studio/user-guide/text-generation
+
+
 QWen的sambert语音模型目前免费额度还不少
 
 ```python
