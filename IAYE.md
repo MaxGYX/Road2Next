@@ -61,3 +61,7 @@ QWen的sambert语音模型目前免费额度还不少
         else:
             print('ERROR: response is %s' % (audio.get_response()))
 ```
+
+**树莓派Zero2W**
+
+<img width="478" alt="image" src="https://github.com/user-attachments/assets/30bf0d61-a155-4779-b59e-e4844c94f8d8" />
