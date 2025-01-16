@@ -63,5 +63,6 @@ QWen的sambert语音模型目前免费额度还不少
 ```
 
 **树莓派Zero2W**
+https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/
 
 <img width="478" alt="image" src="https://github.com/user-attachments/assets/30bf0d61-a155-4779-b59e-e4844c94f8d8" />
