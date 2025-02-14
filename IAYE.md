@@ -1,7 +1,11 @@
 
 <img width="217" alt="image" src="https://github.com/user-attachments/assets/2dba0a02-a9fd-47a6-a413-b08edba6e960">
 <img width="217" alt="image" src="https://github.com/user-attachments/assets/280e5478-ee1f-4d23-ad12-e30e94e54890">
+=================================================================================
 
+20250212，IAYE入选了全国赛，但是和重要的考试时间冲突了，好悲催
+
+=================================================================================
 
 QWen vision model还挺好用的～
 
