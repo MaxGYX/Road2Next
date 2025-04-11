@@ -1,6 +1,7 @@
 I really hope Phoenix Suns can win the championship this year！
 
 #### GO Devin Booker！
+[2025.04.11]So disappointed that the Suns didn't even make the playoffs. Goodbye Durant, even Booker staying in Phoenix next season becomes a luxury! 
 
 [2024.04.25]I can't believe the Suns have been defeated by the Timberwolves in two consecutive games, but I still believe Devin Booker will turn the tide! 
 
