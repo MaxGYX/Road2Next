@@ -11,4 +11,11 @@
 
 8.7，再熬几个夜，把200多个课件做完，不过看起来可以通过一个工作流把工具都串起来，然后端到端的产生课件，可以让老师自己做。这个也许后面可以好好想想～
 
+8.12，发现一个ComfyUI，好像挺适合串起来workflow
+
+  https://docs.comfy.org/zh-CN/development/core-concepts/workflow
+
+  
+
+
 
