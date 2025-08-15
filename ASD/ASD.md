@@ -15,7 +15,9 @@
 
   https://docs.comfy.org/zh-CN/development/core-concepts/workflow
 
+8.15，配音的音频如何与自动与图片做对应比较难办啊
   
+
 
 
 
