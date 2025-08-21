@@ -16,7 +16,10 @@
   https://docs.comfy.org/zh-CN/development/core-concepts/workflow
 
 8.15，配音的音频如何与自动与图片做对应比较难办啊
+
+8.20，手工活儿暂时告一段落，要仔细学些一下其中的原理～
   
+
 
 
 
