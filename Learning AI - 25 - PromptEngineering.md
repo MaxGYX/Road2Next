@@ -3,7 +3,7 @@
 **prompt engineering提示词工程**，指通过精心设计的指令序列（即提示词），来引导、激发、约束大语言模型的潜能，使其输出的内容在准确性Accuracy、可靠性Reliability、安全性Salety和价值Value上达到最优。
 也就是说，提示词工程研究的是如何设计、构建、测试、分析并不断迭代优化提示词的系统性方法论和实践。
 
-**CO-STAR框架（Context，Objective，Style，Tone，Audience，Response）**
+* **CO-STAR框架（Context，Objective，Style，Tone，Audience，Response）**
     * C - Context (背景)：提供任务的宏观背景和相关信息。
     * O - Objective (目标)：明确这次沟通或内容创作想要达成的最终目的。
     * S - Style (风格)：定义写作的文体风格（如：学术论文风格、新闻报道风格、个人博客风格）。
