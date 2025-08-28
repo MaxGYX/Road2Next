@@ -22,6 +22,9 @@
 8.25，发现豆包上线了**超能创意2.0**，感觉之前做过的课件可以用最简单的方式实现了
     * https://bytedance.larkoffice.com/docx/A49Id3FKEoxcJnx4x0Ace2LZnAw
   
+8.29，Google Gemini 2.5 Flash Image，Nano banana，尝试了一下，效果非常好，技术发展太快了
+    * https://aistudio.google.com/gen-media
+  
 
 
 
