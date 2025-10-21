@@ -1,3 +1,7 @@
+### 10.21， Suno生成歌曲现在的效果已经不能用震惊形容了！！！
+
+
+
 ### Song created with AI, Suno is amazing！震惊了我！！
 
 https://app.suno.ai/
