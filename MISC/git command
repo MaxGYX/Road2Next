@@ -1,0 +1,26 @@
+1. 创建与初始化
+* git init：在当前目录下初始化一个新的 Git 仓库。
+* git clone [url]：克隆远程仓库到本地。
+
+2. 基本快照与提交
+* git status：查看工作区和暂存区的文件状态。
+* git add [file]：将文件从工作区添加至暂存区。
+* git commit -m "[message]"：将暂存区的内容提交到本地仓库，并附带提交说明。
+* git diff：查看尚未暂存的改动或已暂存但未提交的改动。
+
+3. 分支与合并
+* git branch：列出、创建或删除分支。
+* git checkout [branch]（或 git switch [branch]）：切换到指定分支。
+* git checkout -b [branch]（或 git switch -c [branch]）：创建并切换到新分支。
+* git merge [branch]：将指定分支合并到当前分支。
+
+4. 远程同步
+* git remote -v：查看远程仓库的详细信息和地址。
+* git fetch [remote]：从远程仓库下载最新的内容，但不自动合并。
+* git pull [remote] [branch]：从远程仓库获取最新内容并自动与当前本地分支合并。
+* git push [remote] [branch]：将本地分支的提交推送到远程仓库。
+
+5. 日志与版本回退
+* git log：查看历史提交记录。
+* git reset [commit]：重置当前 HEAD 到指定状态，可用于撤销暂存区或提交的修改。
+* git revert [commit]：生成一个新的提交来撤销指定的历史提交，不改变原有历史记录。
